@@ -1,7 +1,9 @@
 <html> 
-   <script> 
+   <script>   
         //Commande qui crée une alerte dès le début
-         alert("Ma première calculatrice en HTLM et en JavaScript");
+         
+		 alert("Ma première calculatrice en HTLM et en JavaScript");
+		 
 		 //fonction qui modifie la couleur d'un bouton lorsqu'on le survol
          
         function couleur_bouton1(x) 
@@ -30,24 +32,23 @@
          { 
              document.getElementById("output").value = "" 
          } 
-	  //fonction qui affiche un message si on utilise une touche clavier
+	  //fonction qui affiche un message si on utilise une touche du clavier
 		function evenement_clavier() 
         {
-          alert("Tu as appuyer sur une touche clavier");
+          alert("Vous avez appuyé sur une touche du clavier");
         }
       </script>
 	  <style>
         td button{width:100%}
       </style>
-       
-	  <head> 
+       <head> 
       <meta charset="utf-8" />
 	  <title>Calculatrice</title>
       </head> 
    <body> 
       <table border="1"> 
          <tr> 
-            <td colspan="3"><input id="output"/></td> 
+            <td colspan="3"><input id="output" type="text" onkeydown="evenement_clavier()"/></td> 
             <td><button onclick="effacer()">c</button></td> 
          </tr> 
          <tr> 
